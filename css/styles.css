@@ -1,0 +1,205 @@
+:root {
+    --def-transition-duration: .5s;
+    --def-link-duration: .3s;
+    --def-transition-delay: .2s;
+
+    --color-bg: #272727;
+    --color-bg-panel: #1C1515;
+    --color-bg-info: #FF585860;
+
+    --color-text: #FFFFFF;
+
+    --default-spacing: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-bg-panel);
+}
+
+.logo {
+    margin-top: var(--default-spacing);
+    width: 100px;
+}
+
+.page {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: start;
+    flex: 1;
+    max-width: 1440px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-spacing)*8);
+    width: 100%;
+    padding: 0 calc(var(--default-spacing));
+}
+
+.info-content {
+    background-color: var(--color-bg-info);
+    border-radius: var(--default-spacing);
+    padding: calc(var(--default-spacing)*4);
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-spacing)*3);
+}
+
+.link-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: calc(var(--default-spacing)*3);
+
+    /* flex-wrap: wrap; */
+}
+
+.list-item {
+    min-width: 200px;
+    min-height: 200px;
+    background-color: var(--color-bg-panel);
+    border-radius: var(--default-spacing);
+    overflow: hidden;
+    flex: 0 1 0px;
+    padding: 0;
+    text-align: end;
+}
+
+.item-header {
+    background-color: rgb(94, 64, 64);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--default-spacing)*2);
+}
+
+.item-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--default-spacing));
+    padding: calc(var(--default-spacing)*2);
+}
+
+.flag {
+    width: 96px;
+}
+
+.img-link-out {
+    padding: calc(var(--default-spacing));
+    
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background-color: var(--color-bg-panel);
+    border-radius: var(--default-spacing);
+    padding: calc(var(--default-spacing)*2);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: calc(var(--default-spacing)*2);
+}
+
+.contact-content img {
+    width: 50px;
+}
+
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-spacing));
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-spacing)*2);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-spacing)*2);
+    padding: calc(var(--default-spacing)*2);
+    background-color: var(--color-bg-panel);
+    border-radius: var(--default-spacing);
+}
+
+.note {
+    font-size: 12px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--default-spacing);
+    padding: calc(var(--default-spacing)*4) calc(var(--default-spacing)) calc(var(--default-spacing)*2) calc(var(--default-spacing));
+    width: 100%;
+    max-width: 1440px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+@media (max-width: 768px) {
+    .info-content {
+        font-size: 0.8rem;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
