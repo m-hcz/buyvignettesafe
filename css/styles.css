@@ -176,6 +176,15 @@ body {
     border-radius: var(--default-spacing);
 }
 
+.about-disclaimer {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--default-spacing)*2);
+    padding: calc(var(--default-spacing)*2);
+    background-color: var(--color-bg-info);
+    border-radius: var(--default-spacing);
+}
+
 .note {
     font-size: 12px;
 }
